@@ -58,6 +58,14 @@ nmap <C-Enter> o<ESC>k
 
 "       Code Style
 syntax on
+
+
+try 
+    colorscheme platy-dark
+catch
+    colorscheme default
+endtry
+
 set nowrap
 set cursorline
 set colorcolumn=120
@@ -66,3 +74,19 @@ set colorcolumn=120
 set expandtab
 set shiftwidth=4
 set tabstop=4
+
+" TreeSitter
+packadd nvim-treesitter
+lua << EOF
+require("nvim-treesitter").setup{
+    highlight = {
+        enable = true
+    },
+    ensure_installed = {
+        "c", "cpp", "python",
+        "lua", "vim"
+    },
+}
+EOF
+
+lua vim.treesitter.start()
