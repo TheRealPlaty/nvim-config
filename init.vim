@@ -56,10 +56,11 @@ nmap <Enter> o<ESC>
 nmap <S-Enter> O<ESC>j
 nmap <C-Enter> o<ESC>k
 
+" Toggle displaying character with whitespace
+nnoremap <Leader>l :set list!<CR>
+
 "       Code Style
 syntax on
-
-
 try 
     colorscheme platy-dark
 catch
@@ -69,6 +70,10 @@ endtry
 set nowrap
 set cursorline
 set colorcolumn=120
+
+" Displaying a '·' character for spaces 
+set list
+set listchars=space:\\xB7
 
 " Tabs
 set expandtab
@@ -80,7 +85,7 @@ packadd nvim-treesitter
 lua << EOF
 require("nvim-treesitter").setup{
     highlight = {
-        enable = true
+        enable = true,
     },
     ensure_installed = {
         "c", "cpp", "python",
