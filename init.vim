@@ -37,11 +37,11 @@ nmap <BS> <Nop>
 nmap ; :
 
 " Turn off highlights with ESC when in normal mode
-nmap <ESC> :noh <CR>
+nmap <silent> <ESC> :noh <CR>
 
 " Save the file with <Leader>+w
 map <Leader>w :w <CR>
-map <Leader>ex :Ex <CR>
+map <silent> <Leader>ex :Ex <CR>
 
 " Modify the up and down motions to also center the screen
 nnoremap <C-d> <C-d>zz
@@ -57,7 +57,7 @@ nmap <S-Enter> O<ESC>j
 nmap <C-Enter> o<ESC>k
 
 " Toggle displaying character with whitespace
-nnoremap <Leader>l :set list!<CR>
+nnoremap <silent> <Leader>l :set list!<CR>
 
 "       Code Style
 syntax on
