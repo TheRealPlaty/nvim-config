@@ -35,6 +35,7 @@ nmap <BS> <Nop>
 
 " Map the semicolor to color to make entering command mode more comfortable
 nmap ; :
+vmap ; :
 
 " Turn off highlights with ESC when in normal mode
 nmap <silent> <ESC> :noh <CR>
@@ -47,16 +48,16 @@ map <silent> <Leader>ex :Ex <CR>
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
-" <Leader>+o/O will insert and go to a line below/above the current line, without entering INSERT mode
-nnoremap <Leader>o o<ESC>
-nnoremap <Leader>O O<ESC>
-
 "" Remap the Enter key to insert new lines
 nmap <Enter> o<ESC>
 nmap <S-Enter> O<ESC>j
 nmap <C-Enter> o<ESC>k
 
-" Toggle displaying character with whitespace
+"" Using Ctrl and k or j will duplicate the current line above or below
+nnoremap <C-j> yyp
+nnoremap <C-k> yyP
+
+" Toggle displaying a character with whitespace
 nnoremap <silent> <Leader>l :set list!<CR>
 
 "       Code Style
