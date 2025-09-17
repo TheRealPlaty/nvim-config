@@ -95,4 +95,8 @@ require("nvim-treesitter").setup{
 }
 EOF
 
-lua vim.treesitter.start()
+" Autocommand for treesitter
+augroup StartTreesitter
+    autocmd!
+    autocmd FileType * lua pcall(vim.treesitter.start)
+augroup END
