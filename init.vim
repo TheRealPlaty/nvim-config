@@ -1,5 +1,6 @@
 "       Basic settings
 set nocompatible
+set noswapfile
 set number
 set relativenumber
 set hlsearch
@@ -57,8 +58,18 @@ nmap <C-Enter> o<ESC>k
 nnoremap <C-j> yyp
 nnoremap <C-k> yyP
 
+"" Using Ctrl-b to list out open buffers and ready a prompt to switch between them
+nnoremap <C-b> :ls<CR>:buffer<Space>
+
 " Toggle displaying a character with whitespace
 nnoremap <silent> <Leader>l :set list!<CR>
+
+" Adding/Removing tabs
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
+
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 "       Code Style
 syntax on
