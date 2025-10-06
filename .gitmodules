@@ -2,3 +2,6 @@
 	path = pack/vendor/start/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
 	branch = main
+[submodule "pack/vendor/opt/nvim-lspconfig"]
+	path = pack/vendor/start/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git

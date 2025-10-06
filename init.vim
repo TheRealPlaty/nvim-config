@@ -6,6 +6,7 @@ set relativenumber
 set hlsearch
 set wildmenu
 set termguicolors
+set clipboard=unnamedplus
 
 " Setting the cursor shape
 " A random character map stolen from stack overflow
@@ -82,6 +83,7 @@ endtry
 set nowrap
 set cursorline
 set colorcolumn=120
+set signcolumn=yes
 
 " Displaying a '·' character for spaces 
 set list
