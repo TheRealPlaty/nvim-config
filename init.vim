@@ -44,7 +44,6 @@ nmap <silent> <ESC> :noh <CR>
 
 " Save the file with <Leader>+w
 map <Leader>w :w <CR>
-map <silent> <Leader>ex :Ex <CR>
 
 " Modify the up and down motions to also center the screen
 nnoremap <C-d> <C-d>zz
@@ -113,3 +112,19 @@ augroup StartTreesitter
     autocmd!
     autocmd FileType * lua pcall(vim.treesitter.start)
 augroup END
+
+" oil.nvim
+lua << EOF
+require("oil").setup({
+    columns = {
+       "icon",
+       "permissions",
+       "size",
+       -- "mtime",
+    },
+})
+EOF
+
+nnoremap <silent>- :Oil<CR>
+nnoremap <silent><Leader>- :Oil --float<CR>
+

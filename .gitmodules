@@ -5,3 +5,6 @@
 [submodule "pack/vendor/opt/nvim-lspconfig"]
 	path = pack/vendor/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "pack/vendor/start/oil.nvim"]
+	path = pack/vendor/start/oil.nvim
+	url = https://github.com/stevearc/oil.nvim.git
