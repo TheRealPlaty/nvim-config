@@ -8,3 +8,6 @@
 [submodule "pack/vendor/start/oil.nvim"]
 	path = pack/vendor/start/oil.nvim
 	url = https://github.com/stevearc/oil.nvim.git
+[submodule "pack/vendor/start/blink.cmp"]
+	path = pack/vendor/start/blink.cmp
+	url = https://github.com/Saghen/blink.cmp.git
