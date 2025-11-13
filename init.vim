@@ -1,6 +1,7 @@
 "       Basic settings
 set nocompatible
 set noswapfile
+set noswapfile
 set number
 set relativenumber
 set hlsearch
@@ -71,6 +72,12 @@ nnoremap <S-Tab> <<
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
+" Folding
+set foldmethod=expr
+set foldlevel=99
+set foldlevelstart=1
+set foldnestmax=4
+
 "       Code Style
 syntax on
 try 
@@ -111,6 +118,7 @@ EOF
 augroup StartTreesitter
     autocmd!
     autocmd FileType * lua pcall(vim.treesitter.start)
+    autocmd FileType * lua vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 augroup END
 
 " oil.nvim
